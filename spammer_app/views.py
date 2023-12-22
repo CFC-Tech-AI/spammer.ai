@@ -7,8 +7,8 @@ from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 
 
-nb_model = joblib.load('spam_classifier_model.pkl')
-vectorizer = joblib.load('email_vectorizer.pkl')
+nb_model = joblib.load('spammer_app/spam_classifier_model.pkl')
+vectorizer = joblib.load('spammer_app/email_vectorizer.pkl')
 
 
 def preprocess_email(email):    

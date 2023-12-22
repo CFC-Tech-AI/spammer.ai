@@ -5,7 +5,7 @@ import joblib
 
 def classify_email(message):
     # Load the pre-trained model
-    model = joblib.load('spam_classifier_model.pkl')
+    model = joblib.load('spammer_app/spam_classifier_model.pkl')
 
     # Vectorize the input message
     vectorizer = CountVectorizer()
