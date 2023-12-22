@@ -2,43 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Result</title>
+    <title>Classification Result</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Impact', sans-serif;
+            background-color: #4d4d4d; /* Gray - a bit gloomy */
+            color: #e6e6e6;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
         }
 
         header {
-            background-color: #333;
+            background-color: #ff6600; /* DarkOrange - a dash of warning */
             color: #fff;
-            padding: 10px;
+            padding: 20px;
             text-align: center;
+            font-size: 2rem;
+            width: 100%;
         }
 
         main {
             max-width: 600px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #1a1a1a; /* DarkGray - a sinister touch */
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(255, 102, 0, 0.5); /* DarkOrange shadow */
             text-align: center;
         }
 
         .spam {
-            color: #d9534f;
+            color: #ff3333; /* A fiery red for SPAM */
+            font-size: 1.8rem;
+            margin-bottom: 20px;
         }
 
         .ham {
-            color: #5bc0de;
+            color: #66b3ff; /* A cool blue for HAM */
+            font-size: 1.8rem;
+            margin-bottom: 20px;
         }
 
         a {
-            color: #007BFF;
+            color: #ff6600; /* DarkOrange - because it stands out */
             text-decoration: none;
+            font-size: 1.4rem;
         }
 
         a:hover {
@@ -54,7 +67,7 @@
 
     <main>
         {% if is_spam %}
-            <h2 class="spam">This email seems to be SPAM !!!!</h2>
+            <h2 class="spam">This email seems to be SPAM!!!</h2>
         {% else %}
             <h2 class="ham">This email seems to be HAM (not spam).</h2>
         {% endif %}
